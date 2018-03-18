@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-#import "ViewController16dayweather.h"
+#import "ViewController7DayWeather.h"
 
 
 @interface ViewController : UIViewController<CLLocationManagerDelegate>{

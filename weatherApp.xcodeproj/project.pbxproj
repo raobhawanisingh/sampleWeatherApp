@@ -17,7 +17,8 @@
 		F450FE882054F60C005A26A8 /* weatherAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F450FE872054F60C005A26A8 /* weatherAppUITests.m */; };
 		F450FE972054FCA9005A26A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F450FE962054FCA9005A26A8 /* CoreLocation.framework */; };
 		F450FE992054FD12005A26A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F450FE982054FD12005A26A8 /* MapKit.framework */; };
-		F450FE9C2055233D005A26A8 /* ViewController16dayweather.m in Sources */ = {isa = PBXBuildFile; fileRef = F450FE9B2055233D005A26A8 /* ViewController16dayweather.m */; };
+		F450FEDE205E4061005A26A8 /* CellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F450FEDD205E4061005A26A8 /* CellTableViewCell.m */; };
+		F450FEE1205E60E4005A26A8 /* ViewController7DayWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = F450FEE0205E60E4005A26A8 /* ViewController7DayWeather.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +57,10 @@
 		F450FE892054F60C005A26A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F450FE962054FCA9005A26A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F450FE982054FD12005A26A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		F450FE9A2055233D005A26A8 /* ViewController16dayweather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController16dayweather.h; sourceTree = "<group>"; };
-		F450FE9B2055233D005A26A8 /* ViewController16dayweather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController16dayweather.m; sourceTree = "<group>"; };
+		F450FEDC205E4061005A26A8 /* CellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTableViewCell.h; sourceTree = "<group>"; };
+		F450FEDD205E4061005A26A8 /* CellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTableViewCell.m; sourceTree = "<group>"; };
+		F450FEDF205E60E4005A26A8 /* ViewController7DayWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController7DayWeather.h; path = ../ViewController7DayWeather.h; sourceTree = "<group>"; };
+		F450FEE0205E60E4005A26A8 /* ViewController7DayWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController7DayWeather.m; path = ../ViewController7DayWeather.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +119,10 @@
 				F450FE682054F60B005A26A8 /* ViewController.h */,
 				F450FE692054F60B005A26A8 /* ViewController.m */,
 				F450FE6B2054F60B005A26A8 /* Main.storyboard */,
-				F450FE9A2055233D005A26A8 /* ViewController16dayweather.h */,
-				F450FE9B2055233D005A26A8 /* ViewController16dayweather.m */,
+				F450FEDC205E4061005A26A8 /* CellTableViewCell.h */,
+				F450FEDD205E4061005A26A8 /* CellTableViewCell.m */,
+				F450FEDF205E60E4005A26A8 /* ViewController7DayWeather.h */,
+				F450FEE0205E60E4005A26A8 /* ViewController7DayWeather.m */,
 				F450FE6E2054F60B005A26A8 /* Assets.xcassets */,
 				F450FE702054F60B005A26A8 /* LaunchScreen.storyboard */,
 				F450FE732054F60B005A26A8 /* Info.plist */,
@@ -297,7 +302,8 @@
 				F450FE6A2054F60B005A26A8 /* ViewController.m in Sources */,
 				F450FE672054F60B005A26A8 /* AppDelegate.m in Sources */,
 				F450FE642054F60B005A26A8 /* main.m in Sources */,
-				F450FE9C2055233D005A26A8 /* ViewController16dayweather.m in Sources */,
+				F450FEE1205E60E4005A26A8 /* ViewController7DayWeather.m in Sources */,
+				F450FEDE205E4061005A26A8 /* CellTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

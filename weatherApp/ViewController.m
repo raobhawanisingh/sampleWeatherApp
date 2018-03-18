@@ -21,6 +21,7 @@
     [self getLocation];
     [self getPinPoint];
     [self getWeatherAPI];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (void)getLocation{
@@ -59,6 +60,10 @@
     NSURL *url = [NSURL URLWithString:strURLApi];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *jsondata = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_activity stopAnimating];
+            _activity.hidden = YES;
+        });
         [_activity stopAnimating];
         _activity.hidden = YES;
         if(error){
@@ -116,8 +121,12 @@
 }
 
 - (IBAction)btnWeatherAction:(id)sender {
+    //float lat = loctnManager.location.coordinate.latitude;
+    //float log = loctnManager.location.coordinate.longitude;
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    ViewController16dayweather *vc = [story instantiateViewControllerWithIdentifier:@"16day"];
+    ViewController7DayWeather *vc = [story instantiateViewControllerWithIdentifier:@"7day"];
+    vc.latitude = loctnManager.location.coordinate.latitude ;
+     vc.logitude = loctnManager.location.coordinate.longitude;
     [self.navigationController pushViewController:vc animated:YES];
     
 }
