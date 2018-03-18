@@ -17,6 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" id="BOe-xS-DzU">
+                                <rect key="frame" x="193" y="513" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="0.0" maxX="12" maxY="12"/>
+                            </activityIndicatorView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" id="v87-rW-pkJ">
                                 <rect key="frame" x="0.0" y="66" width="414" height="376"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -66,7 +71,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="boO-Ka-UGI">
-                                <rect key="frame" x="159" y="522" width="177" height="25"/>
+                                <rect key="frame" x="167" y="508" width="177" height="25"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,6 +90,7 @@
                     <navigationItem key="navigationItem" id="Tg7-kv-tgM"/>
                     <connections>
                         <outlet property="MapKit" destination="v87-rW-pkJ" id="c3c-v2-glJ"/>
+                        <outlet property="activity" destination="BOe-xS-DzU" id="fiJ-aR-b2n"/>
                         <outlet property="citylbl" destination="boO-Ka-UGI" id="EbO-20-tJ9"/>
                         <outlet property="discirption" destination="eA5-QR-Ye7" id="mSZ-eU-7gf"/>
                         <outlet property="maxTemplbl" destination="L65-77-lol" id="7eh-Z9-ASh"/>
@@ -108,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRt-uc-Bxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="506" y="42"/>
+            <point key="canvasLocation" x="562" y="42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wL3-Nv-LTJ">
@@ -124,7 +130,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKG-Db-9f9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388.75" y="147.85166666666666"/>
+            <point key="canvasLocation" x="-535" y="42"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

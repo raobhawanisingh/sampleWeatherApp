@@ -17,9 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"16Day Weather";
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:1521270000];
+    NSLog(@"----%@",date);
     // Do any additional setup after loading the view.
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

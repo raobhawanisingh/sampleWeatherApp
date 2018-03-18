@@ -52,18 +52,26 @@
     [_MapKit addAnnotation:pinPoint];
 }
 - (void)getWeatherAPI{
+    [_activity startAnimating];
    // NSString *weatherApi = @"api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=9df7536494a4907549d7639b6b149364";
     NSString *strURLApi = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=9df7536494a4907549d7639b6b149364",loctnManager.location.coordinate.latitude,loctnManager.location.coordinate.longitude];
     NSLog(@"%@",strURLApi);
     NSURL *url = [NSURL URLWithString:strURLApi];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *jsondata = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        [_activity stopAnimating];
+        _activity.hidden = YES;
         if(error){
+            NSString *title = @"ERROR";
+            [self alertMethod:title withMessage:error.localizedDescription];
             NSLog(@"%@",error.localizedDescription);
         }else{
             NSError *jsonError;
             NSDictionary *dict =[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
             if(jsonError){
+                NSString *title = @"JSONERROR";
+                [self alertMethod:title withMessage:jsonError.localizedDescription];
+
                 NSLog(@"%@",jsonError.localizedDescription);
             }
             else{
@@ -96,6 +104,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)alertMethod:(NSString *)title withMessage:(NSString *)message{
+    UIAlertController *alertc = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    }];
+    [alertc addAction:action];
+    [self presentViewController:alertc animated:YES completion:nil];
+
+}
 
 - (IBAction)btnWeatherAction:(id)sender {
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

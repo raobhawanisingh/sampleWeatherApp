@@ -23,6 +23,7 @@
 - (IBAction)btnWeatherAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *maxTemplbl;
 @property (strong, nonatomic) IBOutlet UILabel *discirption;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 
 @end
 
